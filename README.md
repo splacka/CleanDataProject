@@ -4,8 +4,8 @@
 This script does the following:
 * Installs packages data.table and reshape2 if necessary
 * Loads the data from the UCI HAR Dataset, located in the workding directory (see CodeBook.md for more information)
-* Merges the training and the test sets to create one data set.
-* Extracts only the measurements on the mean and standard deviation for each measurement. 
-* Uses descriptive activity names to name the activities in the data set
-* Appropriately labels the data set with descriptive activity names from the activities data 
-* Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
+* Uses cbind and rbind to merge the training and the test sets to create one data set
+* Identifies and extracts only data in the columns containing "mean" or "std" 
+* Renames columns to capitalize mean and std and remove punctuation
+* Substitutes activity ids with actual activity names
+* Using melt and dcast, creates an independent tidy data set with the average of each variable for each activity and each subject 
